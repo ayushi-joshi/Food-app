@@ -128,7 +128,7 @@ const initialState={
     quantity:1,
 }
 ],
-listData:[],
+
 };
 const[state, CardDispatch]=useReducer(CardReducer, initialState)
 return(

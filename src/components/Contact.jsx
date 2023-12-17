@@ -14,9 +14,15 @@ const Contact = () => {
             [name]: value
         }));
     };
-    
+    const {name, email, message}=formData;
     const handleSubmit = (e) => {
         e.preventDefault();
+       if(!name ||  !email ||!message){
+        alert("please fill all the details");
+        return;
+       }
+
+
        setIsSubmitted(true);
     };
   return (
@@ -34,19 +40,19 @@ const Contact = () => {
         ):(
            <> <p>  Have questions or feedback?Just fill out the form below and we'll get back to you soon!</p>
            <form action=""  className='flex flex-col mt-3'onSubmit={handleSubmit} >
-                <input name="name" type="text" placeholder='Name:' className='p-2 bg-transparent border-2' value={formData.name} onChange={handleInputChange}/>
-                <input name="email" type="text" placeholder='Email:' className='mt-2 p-2 bg-transparent border-2' value={formData.email} onChange={handleInputChange} />
-            <textarea name="message" id="" cols="30" rows="10" className='mt-2 p-2 bg-transparent border-2' placeholder='Message:'value={formData.message} onChange={handleInputChange}></textarea>
+                <input name="name" type="text" placeholder='Name:' required className='p-2 bg-transparent border-2 valid:required' value={formData.name} onChange={handleInputChange}/>
+                <input name="email" type="text" placeholder='Email:' required className='mt-2 p-2 bg-transparent border-2' value={formData.email} onChange={handleInputChange} />
+            <textarea name="message" id="" cols="30" rows="10" required className='mt-2 p-2 bg-transparent border-2' placeholder='Message:'value={formData.message} onChange={handleInputChange}></textarea>
             <button className='border-2 bg-pink-200 mt-2'>Send Message</button>
             </form></>
         )
        }
      
-        </div>
+        </div>-
     </div>
     </div>
     </div>
   )
 }
 
-export default Contact
+export default Contact;

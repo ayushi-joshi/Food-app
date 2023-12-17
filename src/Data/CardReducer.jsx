@@ -1,19 +1,15 @@
 const  CardReducer=(state, action)=>{
  
     switch(action.type){
-       case "SEARCH_DATA":{
-        if (action.payload === "") {
-            return {
-              ...state,
-              listData: []
-            }
-          } else {
-            return {
-              ...state,
-              listData: state.cardData.filter(dish => dish.Dishes.toLowerCase().includes(action.payload.toLowerCase()))
-            }
+       case "SEARCH_DATA":
+        return{
+          ...state,
+          cardData: state.cardData.filter(item =>
+            item.Dishes.toLowerCase().includes(action.payload.toLowerCase())
+          ),
           }
-       }
+
+            
 
 default:
     return state

@@ -87,12 +87,20 @@ const navigate=useNavigate()
     event.preventDefault();
  setIsSubmitted(true);
 };
+const handleCheck=()=>{
+  if(cartItems.length===0){
+    alert("Empty cart,  please add the item in cart");
+  }
+  else{
+    navigate("/checkout")
+  }
+}
  
   return( 
     
-   <nav className="bg-red-500 h-14  flex items-center justify-between space-x-12">
+   <nav className="bg-red-500  h-14 w-full   flex items-center justify-between space-x-12">
 <div className=" flex items-center  w-60">
-<img style={{height:50}} className='lg:mx-10' src={Logo} alt="" />
+<img style={{height:60}} className='lg:mx-10' src="https://miro.medium.com/v2/resize:fit:596/0*lrA8egQdkUtQtJFb.png" alt="" />
     <h1 className="lg:-mx-4 text-sm  mx-2 font-bold text-white ">TASTE TREKKER</h1>
 </div>
 <div className="lg:flex lg:space-x-10 lg:font-bold lg:text-white lg:list-none lg:cursor-pointer hidden sm:hidden">
@@ -101,9 +109,9 @@ const navigate=useNavigate()
  <Link to="/menu"> <li className='hover:text-gray-500'>Menu</li></Link>
  <Link to='/contact'><li className='hover:text-gray-500'>Contact</li></Link>
 </div>  
-<div className='bg-gray-100 lg:flex items-center px-2  relative left-12 w-[150px] hidden sm:block 
+<div className='bg-gray-100 lg:flex items-center px-2  relative left-12 w-[150px] hidden sm:block md:hidden
  lg:w-[300px]'>
-  <AiOutlineSearch size={20} className=''/>
+  <AiOutlineSearch size={20} />
   <form onSubmit={handleSearch}>
   <input className='focus:outline-none bg-transparent p-1 mx-2' required type="search" value={search} placeholder='Search' onChange={(e)=>setSearch(e.target.value)}/>
   </form>
@@ -134,7 +142,7 @@ className='absolute right-20 top-4 cursor-pointer'/>
    </div>
   
       
-      <div  className={cart ? 'absolute  top-0 right-0 w-80 lg:w-96   bg-slate-100 z-10 duration-300': 'absolute lg:hidden sm:hidden top-[-100%] right-0 w-[150px]  h-[200px] bg-green-200 z-10 duration-300' }>
+      <div  className={cart ? 'absolute top-0 right-0 w-80 lg:w-96   bg-slate-100 z-10 duration-300': 'absolute lg:hidden sm:hidden top-[-100%] right-0 w-[150px]  h-[200px] bg-green-200 z-10 duration-300' }>
 
       <AiOutlineClose size={25} onClick={()=>setCart(!cart)}
       className='absolute right-2 top-4 cursor-pointer'/>
@@ -188,7 +196,7 @@ className='absolute right-20 top-4 cursor-pointer'/>
          <h1 className='text-xl font-bold'>Subtotal:</h1>
          <p className='text-xl font-bold'>₹  {isNaN(total) ? "Error" :total}</p>
        </span>
-     <div className='flex justify-end mx-3 p-2'> <button className='bg-yellow-300 w-1/2 h-10'onClick={() => navigate("/checkout")}>Checkout</button></div> 
+     <div className='flex justify-end mx-3 p-2'> <button className='bg-yellow-300 w-1/2 h-10'onClick={handleCheck}>Checkout</button></div> 
      </div>
       </div>
 
