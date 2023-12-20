@@ -27,8 +27,8 @@ const Contact = () => {
     };
   return (
    
-    <div className='w-full h-[91vh] '> 
-     <img className='top-0 left-0 lg:w-full lg:h-full h-full  w-full object-cover'src="https://media.istockphoto.com/id/1526533829/photo/shredded-pancake-or-hand-pancake-of-taiwan-food-nutritious-breakfast-chinese-food-traditional.jpg?s=612x612&w=0&k=20&c=Qwcp935fDV7sEN3VF9vAbdhaevBrwdss2Ut_lONO_AI=" alt="" />
+    <div className='w-full contact'> 
+    
     <div className='flex justify-center items-center'>
     <div className='absolute top-[20%] flex flex-col justify-center items-center'>
         <div className='border-2 shadow-lg p-2 lg:w-full w-2/3 '>

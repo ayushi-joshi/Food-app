@@ -98,7 +98,7 @@ const handleCheck=()=>{
  
   return( 
     
-   <nav className="bg-red-500  h-14 w-full   flex items-center justify-between space-x-12">
+   <nav className="bg-red-500  nav w-full   flex items-center justify-between space-x-12">
 <div className=" flex items-center  w-60">
 <img style={{height:60}} className='lg:mx-10' src="https://miro.medium.com/v2/resize:fit:596/0*lrA8egQdkUtQtJFb.png" alt="" />
     <h1 className="lg:-mx-4 text-sm  mx-2 font-bold text-white ">TASTE TREKKER</h1>
