@@ -98,9 +98,9 @@ const handleCheck=()=>{
  
   return( 
     
-   <nav className="bg-red-500  nav w-full   flex items-center justify-between space-x-12">
+   <nav className="bg-red-500 nav w-full   flex items-center justify-between space-x-12">
 <div className=" flex items-center  w-60">
-<img style={{height:60}} className='lg:mx-10' src="https://miro.medium.com/v2/resize:fit:596/0*lrA8egQdkUtQtJFb.png" alt="" />
+<img style={{height:70}} className='lg:mx-10' src="https://png.pngtree.com/png-clipart/20230106/original/pngtree-simple-and-modern-food-logo-vector-design-png-image_8876455.png" alt="" />
     <h1 className="lg:-mx-4 text-sm  mx-2 font-bold text-white ">TASTE TREKKER</h1>
 </div>
 <div className="lg:flex lg:space-x-10 lg:font-bold lg:text-white lg:list-none lg:cursor-pointer hidden sm:hidden">

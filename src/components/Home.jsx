@@ -96,13 +96,13 @@ const Home = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-   <div className='flex flex-col h-full lg:flex w-full lg:w-full '>
+   <div className='flex flex-col h-full lg:flex w-full lg:w-full  '>
      
        <div className=' img lg:w-full h-80 lg:h-96 w-full sm:h-80 sm:w-full md:w-full  '>
            
-            <div className=' absolute top-[25%] left-8  flex flex-col justify-center items-center space-y-3 '>
-           <h1 className='font-bold text-4xl' >Feels Like <span className='text-red-500'>Home,</span>Tastes</h1>
-           <h1 className='font-bold text-4xl'>Like a <span className='text-red-500'>Paradise.</span></h1> 
+            <div className=' absolute top-[35%] left-8  flex flex-col justify-center items-center space-y-3 '>
+           <h1 className='font-bold text-4xl text-white' >Feels Like <span className='text-red-600'>Home,</span>Tastes</h1>
+           <h1 className='font-bold text-4xl text-white'>Like a <span className='text-red-600'>Paradise.</span></h1> 
            <button className='bg-gray-800 w-60 h-10 text-white hover:bg-slate-100 hover:text-black font-bold'onClick={handleClick}>Order Here</button>
   </div> 
              </div>
@@ -112,7 +112,7 @@ const Home = () => {
       <div className='h-10 bg-rose-100 flex justify-center items-center'>
         <h1 className='font-bold text-xl'>Most Popular</h1>
         </div>
-     <div className=' w-full flex space-x-4 p-2 items-center justify-center '>
+     <div className=' w-full flex space-x-4 mt-2 p-2 items-center justify-center '>
             
             <Slider {...settings} ref={sliderRef}>
               {carouselItems.map((item) => (
@@ -122,13 +122,17 @@ const Home = () => {
                     src={item.imageUrl}
                     alt={item.title}
                   />
-                  <div className=' h-1/2  p-4 text-black  flex flex-col justify-center'>
+                  <div className=' h-1/2   text-black  flex flex-col items-center mt-2'>
                     <h2 className='text-xl '>{item.title}</h2>
                     <p className='text-lg'>₹ {item.Price}</p>
                   </div>
                 </div>
               ))}
             </Slider>
+          </div>
+          <div className='flex'>
+            
+            
           </div>
     <div className='h-48 bg-gray-200 flex flex-col items-center justify-center'>
       <h1 className='text-2xl font-bold'>Contact us</h1>

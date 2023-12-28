@@ -12,7 +12,8 @@
     font-family: 'Montserrat', sans-serif;
   }
   .img{
-    background-image: url(https://img.freepik.com/premium-photo/mexican-tortilla-wrap-with-chicken-breast-vegetables-top-view-healthy-snack_114941-1044.jpg?size=626&ext=jpg&ga=GA1.1.399316136.1689251213&semt=ais);
+    height: 80vh;
+    background-image: url(https://img.freepik.com/premium-photo/tortilla-with-tortillas-wooden-table_865967-284491.jpg?size=626&ext=jpg&ga=GA1.1.399316136.1689251213&semt=ais );
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,3 +52,6 @@ background-repeat: no-repeat;
 height: 90vh;
 background-size: cover;
 }
+
+/* https://img.freepik.com/premium-photo/mexican-tortilla-wrap-with-chicken-breast-vegetables-top-view-healthy-snack_114941-1044.jpg?size=626&ext=jpg&ga=GA1.1.399316136.1689251213&semt=ais */
+/* https://img.freepik.com/premium-photo/tortilla-with-tortillas-wooden-table_865967-284491.jpg?size=626&ext=jpg&ga=GA1.1.399316136.1689251213&semt=ais */
