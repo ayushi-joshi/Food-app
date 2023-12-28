@@ -19,12 +19,12 @@
     background-size: cover;
   }
 
-  /* Add this CSS to your component or global styles */
+
 .slick-slider {
   overflow: hidden;
 }
 
-/* Optional: If you want to hide the scrollbar for touch devices */
+
 .slick-list {
   overflow: hidden !important;
   -webkit-overflow-scrolling: touch;
@@ -52,6 +52,3 @@ background-repeat: no-repeat;
 height: 90vh;
 background-size: cover;
 }
-
-/* https://img.freepik.com/premium-photo/mexican-tortilla-wrap-with-chicken-breast-vegetables-top-view-healthy-snack_114941-1044.jpg?size=626&ext=jpg&ga=GA1.1.399316136.1689251213&semt=ais */
-/* https://img.freepik.com/premium-photo/tortilla-with-tortillas-wooden-table_865967-284491.jpg?size=626&ext=jpg&ga=GA1.1.399316136.1689251213&semt=ais */
