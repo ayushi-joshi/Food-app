@@ -85,14 +85,13 @@ const Home = () => {
   useEffect(() => {
     const slider = sliderRef.current;
 
-    // Set up automatic scrolling every 5 seconds
     const intervalId = setInterval(() => {
       if (slider) {
         slider.slickNext();
       }
     }, 2000);
 
-    // Clear the interval when the component is unmounted
+   
     return () => clearInterval(intervalId);
   }, []);
   return (
