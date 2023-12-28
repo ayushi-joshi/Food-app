@@ -98,7 +98,7 @@ const Home = () => {
   return (
    <div className='flex flex-col h-full lg:flex w-full lg:w-full  '>
      
-       <div className=' img lg:w-full h-80 lg:h-96 w-full sm:h-80 sm:w-full md:w-full  '>
+       <div className=' img lg:w-full h-80 w-full sm:h-80 sm:w-full md:w-full  '>
            
             <div className=' absolute top-[35%] left-8  flex flex-col justify-center items-center space-y-3 '>
            <h1 className='font-bold text-4xl text-white' >Feels Like <span className='text-red-600'>Home,</span>Tastes</h1>
