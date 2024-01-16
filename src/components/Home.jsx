@@ -4,8 +4,12 @@ import { useState } from 'react';
 import Slider from 'react-slick';
 import { useRef } from 'react';
 import { useEffect } from 'react';
+import { FaStar,FaFacebookF,FaTwitter ,FaInstagram,FaPhoneAlt  } from "react-icons/fa";
 import 'slick-carousel/slick/slick.css';
+import { FaLocationDot } from "react-icons/fa6";
 import 'slick-carousel/slick/slick-theme.css';
+import { MdEmail } from "react-icons/md";
+
 const Home = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -94,12 +98,15 @@ const Home = () => {
    
     return () => clearInterval(intervalId);
   }, []);
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
    <div className='flex flex-col h-full lg:flex w-full lg:w-full  '>
      
        <div className=' img lg:w-full  w-full  sm:w-full md:w-full  '>
            
-            <div className=' absolute top-[35%] left-8  flex flex-col justify-center items-center space-y-3 '>
+            <div className='absolute top-[35%] left-8  flex flex-col justify-center items-center space-y-3 ' data-aos="fade-right"  data-aos-duration="2000">
            <h1 className='font-bold text-4xl text-white' >Feels Like <span className='text-red-600'>Home,</span>Tastes</h1>
            <h1 className='font-bold text-4xl text-white'>Like a <span className='text-red-600'>Paradise.</span></h1> 
            <button className='bg-gray-800 w-60 h-10 text-white hover:bg-slate-100 hover:text-black font-bold'onClick={handleClick}>Order Here</button>
@@ -111,7 +118,7 @@ const Home = () => {
       <div className='h-10 bg-rose-100 flex justify-center items-center'>
         <h1 className='font-bold text-xl'>Most Popular</h1>
         </div>
-     <div className=' w-full flex space-x-4 mt-2 p-2 items-center justify-center '>
+     <div className=' w-full flex space-x-4 mt-5 p-4 items-center justify-center '>
             
             <Slider {...settings} ref={sliderRef}>
               {carouselItems.map((item) => (
@@ -129,14 +136,106 @@ const Home = () => {
               ))}
             </Slider>
           </div>
-          <div className='flex'>
+         <div className='lg:flex lg:flex-col mt-2 '>
+          <h1 className='text-center text-2xl font-bold'>Our Customer Say</h1>
+         <div className='lg:flex lg:flex-row mt-5 w-full sm:flex-wrap lg:flex-nowrap '>
+         <div className=' p-2 flex flex-row' data-aos="flip-left"data-aos-duration="2000">
+              <div className='ms-2'><img className='h-12 w-44' src="https://preview.colorlib.com/theme/cakeshop/assets/img/gallery/customer1.png" alt="" />
+              
+              </div>
             
+            <div className='border-clip flex items-center justify-center'>
+            <div className=' box1 p-2 bg-white flex justify-end '>
+              <div className='flex flex-col w-4/5'>
+              <span className='flex space-x-1'><FaStar color='#fbbf24'/><FaStar color='#fbbf24'/><FaStar color='#fbbf24'/><FaStar color='#fbbf24'/><FaStar color='#fbbf24'/></span>
+             
+              <p className='text-sm mt-2'>The food at Taste Trekker is simply amazing! The flavors are rich, and the ingredients are fresh. I can't get enough of their delicious parathas. Highly recommended!
+</p>
+              <p className=' text-sm font-bold mt-2 '>-Louise Kelly
+</p>
+           </div>
+            </div>
+            </div>
+            </div>
             
-          </div>
-    <div className='h-48 bg-gray-200 flex flex-col items-center justify-center'>
-      <h1 className='text-2xl font-bold'>Contact us</h1>
-      <button className='bg-blue-700 mt-4 w-60 h-10 text-white hover:bg-slate-500 hover:text-black font-bold' onClick={()=>navigate("/contact")}>contact here</button>
+            <div className=' p-2 flex flex-row' data-aos="flip-left"data-aos-duration="3000" >
+              <div className='ms-2'><img className='h-12 w-44' src="https://preview.colorlib.com/theme/cakeshop/assets/img/gallery/customer3.png" alt="" />
+              
+              </div>
+              <div className='border-clip flex items-center justify-center'>
+            <div className=' box1 p-2 bg-white flex justify-end '>
+              <div className='flex flex-col w-4/5'>
+              <span className='flex space-x-1'><FaStar color='#fbbf24'/><FaStar color='#fbbf24'/><FaStar color='#fbbf24'/><FaStar color='#fbbf24'/><FaStar color='#fbbf24'/></span>
+             
+              <p className='text-sm mt-2'> The variety of parathas at Taste Trekker is outstanding! Each bite is a burst of flavors, and the service is excellent. I keep coming back for more. A truly delightful experience!  Highly recommended!</p>
+              <p className=' text-sm font-bold mt-2 '>-Wilma Mumduya</p>
+           </div>
+            </div>
+            </div>
+            </div>
+            <div className=' p-2 flex flex-row' data-aos="flip-left" data-aos-duration="2000">
+              <div className='ms-2'><img className='h-12 w-44' src="https://preview.colorlib.com/theme/cakeshop/assets/img/gallery/customer2.png" alt="" />
+              
+              </div>
+            
+           <div className='border-clip flex items-center justify-center '>
+           <div className=' box1 p-2 bg-white flex justify-end '>
+              <div className='flex flex-col w-4/5'>
+              <span className='flex space-x-1'><FaStar color='#fbbf24'/><FaStar color='#fbbf24'/><FaStar color='#fbbf24'/><FaStar color='#fbbf24'/><FaStar color='#fbbf24'/></span>
+             
+              <p className='text-sm mt-2'>Taste Trekker never disappoints! The quality of the ingredients is evident in every dish. The staff is friendly, and the ambiance is cozy. I highly recommend trying their special paratha menu!</p>
+              <p className=' text-sm font-bold mt-2'>-Charles White</p>
+           </div>
+            </div>
+           </div>
+            </div>
+            
+            </div>
+         </div>
+  <div className=' contact-sec lex flex-col  mt-4 space-y-7 '>
+  <div className=' flex flex-col items-center text-white justify-center mt-4 '>
+      <h1 className='text-2xl font-bold '>Contact us</h1>
+      <button className=' mt-4 w-60 h-10 border hover:bg-blue-700 hover:text-black font-bold' onClick={()=>navigate("/contact")}>contact here</button>
+    
     </div>
+   <div className='flex'>
+
+   <div className='flex flex-col justify-start  ms-4 text-white '>
+      <p className='w-2/4'>At Taste Trekker, we believe in using the freshest ingredients sourced locally. No preservatives, 
+                    no compromises.</p>
+<span className=' w-2/4 text-center flex space-x-4 mt-4 p-2  '><a href="facebook.com">
+
+<FaFacebookF size={35} color='white' /></a>
+<a href="twitter.com">
+
+<FaTwitter  size={35} color='white'/></a>
+<a href="instagram.com">
+
+<FaInstagram size={35} color='white'/></a>
+</span>
+    </div>
+   <div className=' w-1/2 flex  justify-end '>
+   
+   <div className=' flex flex-col   me-4 space-y-5 text-white '>
+   
+ <div className=' flex flex-row  '>  <FaLocationDot size={20}  />  <p className='ms-4' > 
+ 456 Street, Spice City, Mumbai, India
+      </p></div>
+      <div className=' flex flex-row '>  <MdEmail size={20} />  <p className='ms-4' > 
+      info@parathaparadise.in
+      </p></div>
+      <div className=' flex flex-row '>  <FaPhoneAlt  size={20} />  <p className='ms-4' > 
+      +91 98765 43210
+      </p></div>
+      
+     
+    </div>
+   </div>
+  </div>
+   </div>
+ <div className='bg-gray-800 flex text-white items-center justify-center font-semibold h-10'>
+<p>Copyright ©2023 All rights reserved</p>
+ </div>
             </div>
 
       
